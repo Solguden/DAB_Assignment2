@@ -10,7 +10,11 @@ namespace DAB_Assignment2.Models
         public string PersonId { get; set; }
 
         public string Name { get; set; }
+
+        public string WaiterID { get; set; }
         public Waiter Waiter { get; set; }
+
+        public string GuestID { get; set; }
         public Guest Guest { get; set; }
 
     }

@@ -8,9 +8,9 @@ namespace DAB_Assignment2.Models.Relations
 {
     public class WaiterTable
     {
-        public int WaiterId { get; set; }
+        public string WaiterId { get; set; }
         public Waiter Waiter { get; set; }
-        public int TableId { get; set; }
+        public string TableId { get; set; }
         public Table Table { get; set; }
     }
 }

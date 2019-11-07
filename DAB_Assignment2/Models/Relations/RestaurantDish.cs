@@ -7,10 +7,10 @@ namespace DAB_Assignment2.Models.Relations
 {
     public class RestaurantDish
     {
-        public int RestaurantId { get; set; }
+        public string RestaurantId { get; set; }
         public Restaurant Restaurant { get; set; }
 
-        public int DishId { get; set; }
+        public string DishId { get; set; }
         public Dish Dish { get; set; }
     }
 }

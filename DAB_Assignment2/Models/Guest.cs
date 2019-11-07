@@ -10,7 +10,7 @@ namespace DAB_Assignment2.Models
     {
         public string GuestId { get; set; }
         public DateTime Time { get; set; }
-        public List<Review> Reviews { get; set; }
+        public Review Reviews { get; set; }
         public List<Table> Tables { get; set; }
         public List<GuestDish> GuestDishes { get; set; }
         public Person Person { get; set; }

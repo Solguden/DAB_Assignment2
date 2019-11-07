@@ -58,6 +58,17 @@ namespace DAB_Assignment2.Data
              .WithMany(pl => pl.WaiterTables)
              .HasForeignKey(plb => plb.TableId);
 
+            //Waiter - person (one to one)
+            modelBuilder.Entity<Waiter>()
+            .HasOne(s => s.Person)
+            .WithOne(l => l.Waiter)
+            .HasForeignKey<Person>();
+
+            //Guest - person (one to one)
+            modelBuilder.Entity<Guest>()
+            .HasOne(s => s.Person)
+            .WithOne(l => l.Guest)
+            .HasForeignKey<Person>();
         }
 
         //public MyDB(DbContextOptions<MyDB> options) : base(options)
