@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using WebApplication1.Model;
+using DAB_Assignment2.Models;
+using DAB_Assignment2.Models.Relations;
 
-namespace WebApplication1.Data
+namespace DAB_Assignment2.Data
 {
     public class MyDB : DbContext
     {
@@ -24,6 +25,38 @@ namespace WebApplication1.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Dish - RestaurantDish (many-to-many relationship)
+            modelBuilder.Entity<RestaurantDish>().HasKey(p => new { p.DishId, p.RestaurantId });
+            modelBuilder.Entity<RestaurantDish>()
+                .HasOne(rd => rd.Dish)
+                .WithMany(d => d.RestaurantDishes)
+                .HasForeignKey(rd => rd.DishId);
+            modelBuilder.Entity<RestaurantDish>()
+                .HasOne(rd => rd.Restaurant)
+                .WithMany(r => r.RestaurantDishes)
+                .HasForeignKey(rd => rd.RestaurantId);
+
+            // Guest - Dish (many to many relationship)
+            modelBuilder.Entity<GuestDish>().HasKey(p => new { p.GuestId, p.DishId });
+            modelBuilder.Entity<GuestDish>()
+             .HasOne(plb => plb.Guest)
+             .WithMany(b => b.GuestDishes)
+             .HasForeignKey(plb => plb.GuestId);
+            modelBuilder.Entity<GuestDish>()
+             .HasOne(plb => plb.Dish)
+             .WithMany(pl => pl.GuestDishes)
+             .HasForeignKey(plb => plb.DishId);
+
+            // Waiter - Table (many to many relationship)
+            modelBuilder.Entity<WaiterTable>().HasKey(p => new { p.WaiterId, p.TableId });
+            modelBuilder.Entity<WaiterTable>()
+             .HasOne(plb => plb.Waiter)
+             .WithMany(b => b.WaiterTables)
+             .HasForeignKey(plb => plb.WaiterId);
+            modelBuilder.Entity<WaiterTable>()
+             .HasOne(plb => plb.Table)
+             .WithMany(pl => pl.WaiterTables)
+             .HasForeignKey(plb => plb.TableId);
 
         }
 
