@@ -141,6 +141,7 @@ namespace DAB_Assignment2.Data
             modelBuilder.Entity<Dish>()
               .HasData(new Dish()
               {
+                  DishId = "1334",
                   Price = 9.95,
                   DishName = "Cheese Burger",
                   Type = "Coin Offer",
@@ -148,6 +149,7 @@ namespace DAB_Assignment2.Data
             modelBuilder.Entity<Dish>()
               .HasData(new Dish()
               {
+                  DishId = "1335",
                   Price = 36.95,
                   DishName = "Happy Meal",
                   Type = "Børne Menu",
@@ -156,6 +158,7 @@ namespace DAB_Assignment2.Data
             modelBuilder.Entity<Dish>()
              .HasData(new Dish()
              {
+                 DishId = "1336",
                  Price = 14.95,
                  DishName = "Whopper",
                  Type = "Langsom burger",
@@ -163,6 +166,7 @@ namespace DAB_Assignment2.Data
             modelBuilder.Entity<Dish>()
             .HasData(new Dish()
             {
+                DishId = "1337",
                 Price = 29.95,
                 DishName = "Double-Whopper",
                 Type = "Lidt hurtigere burger",
@@ -173,21 +177,25 @@ namespace DAB_Assignment2.Data
             modelBuilder.Entity<Waiter>()
              .HasData(new Waiter()
              {
+                 WaiterId = "8005",
                  Salary = 2500,
              });
             modelBuilder.Entity<Waiter>()
              .HasData(new Waiter()
              {
+                 WaiterId = "8006",
                  Salary = 2600,
              });
             modelBuilder.Entity<Waiter>()
              .HasData(new Waiter()
              {
+                 WaiterId = "8007",
                  Salary = 2700,
              });
             modelBuilder.Entity<Waiter>()
              .HasData(new Waiter()
              {
+                 WaiterId = "8008",
                  Salary = 2800,
              });
 
@@ -196,21 +204,25 @@ namespace DAB_Assignment2.Data
             modelBuilder.Entity<Guest>()
               .HasData(new Guest()
               {
+                  GuestId = "417",
                   Time = new DateTime(2019, 6, 10),
               });
             modelBuilder.Entity<Guest>()
               .HasData(new Guest()
               {
+                  GuestId = "418",
                   Time = new DateTime(2019, 7, 10),
               });
             modelBuilder.Entity<Guest>()
               .HasData(new Guest()
               {
+                  GuestId = "419",
                   Time = new DateTime(2019, 8, 10),
               });
             modelBuilder.Entity<Guest>()
               .HasData(new Guest()
               {
+                  GuestId = "420",
                   Time = new DateTime(2019, 9, 10),
               });
 
@@ -219,41 +231,49 @@ namespace DAB_Assignment2.Data
             modelBuilder.Entity<Person>()
               .HasData(new Person()
               {
+                  PersonId = "61",
                   Name = "Jeps Jepsemand",
               });
             modelBuilder.Entity<Person>()
               .HasData(new Person()
               {
+                  PersonId = "62",
                   Name = "Jobs Jobsemand",
               });
             modelBuilder.Entity<Person>()
               .HasData(new Person()
               {
+                  PersonId = "63",
                   Name = "Flobs Flobsemand",
               });
             modelBuilder.Entity<Person>()
               .HasData(new Person()
               {
+                  PersonId = "64",
                   Name = "Muubs Megetsyg",
               });
             modelBuilder.Entity<Person>()
               .HasData(new Person()
               {
+                  PersonId = "65",
                   Name = "Blobs Blobbermand",
               });
             modelBuilder.Entity<Person>()
               .HasData(new Person()
               {
+                  PersonId = "67",
                   Name = "Djebs Djakketyv",
               });
             modelBuilder.Entity<Person>()
               .HasData(new Person()
               {
+                  PersonId = "68",
                   Name = "Henrik DABsemand",
               });
             modelBuilder.Entity<Person>()
               .HasData(new Person()
               {
+                  PersonId = "69",
                   Name = "Jørgen Ingenarm",
               });
 
